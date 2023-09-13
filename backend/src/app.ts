@@ -19,6 +19,7 @@ app.use(cors({
     'http://mestokirbob.students.nomoredomains.monster',
     'https://mestokirbob.students.nomoredomains.monster',
   ],
+  optionsSuccessStatus: 200,
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
