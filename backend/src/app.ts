@@ -16,8 +16,8 @@ mongoose.connect(DB_ADDRESS);
 // Только для локальных тестов. Не используйте это в продакшене
 app.use(cors({
   origin: [
-    'http://mestokirbob.students.nomoredomains.monster',
-    'https://mestokirbob.students.nomoredomains.monster',
+    'http://mestokirbob.students.nomoredomains.monster.ru',
+    'https://mestokirbob.students.nomoredomains.monster.ru',
   ],
   optionsSuccessStatus: 200,
 }));
