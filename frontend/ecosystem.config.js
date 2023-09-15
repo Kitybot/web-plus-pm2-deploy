@@ -18,7 +18,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
-      'post-deploy': 'cd /home/pyps/mesto-frontend && npm i && export NODE_OPTIONS=--openssl-legacy-provider && npm run build',
+      'post-deploy': 'cd /home/deploy/mesto-frontend && npm i && export NODE_OPTIONS=--openssl-legacy-provider && npm run build',
     },
   },
 };
