@@ -9,8 +9,7 @@ const {
 module.exports = {
   apps: [{
     name: 'mesto-frontend',
-    // script: './src/app.ts',
-    // interpreter: './node_modules/.bin/ts-node',
+    script: './src/app.ts',
   }],
   deploy: {
     production: {
