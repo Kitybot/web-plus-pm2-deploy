@@ -18,7 +18,9 @@ Node.js, Git, PM2, Nginx.
 
 Публикация проекта
 IP адрес сервера: 51.250.121.24
+
 Frontend: https://mestokirbob.students.nomoredomainsicu.ru
+
 Backend: https://api.mestokirbob.students.nomoredomains.ru
 
 Доступные команды

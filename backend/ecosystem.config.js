@@ -9,7 +9,7 @@ const {
 
 module.exports = {
   apps: [{
-    name: 'mesto-api',
+    name: 'backend',
     script: 'npm run start',
     env_production: {
       NODE_ENV: 'production',
@@ -24,7 +24,7 @@ module.exports = {
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
       'pre-deploy-local': `scp ./.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      'post-deploy': 'cd ../source/backend && npm i && pm2 start ecosystem.config.js --env production && pm2 save',
+      'post-deploy': 'cd /home/pyps/Github/web-plus-pm2-deploy/backend && npm i && pm2 start ecosystem.config.js --env production && pm2 save',
     },
   },
 };
