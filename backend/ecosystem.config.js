@@ -1,30 +1,24 @@
-const dotenvConfig = require('dotenv').config;
-
-dotenvConfig({ path: '.env' });
-dotenvConfig({ path: '.env.deploy' });
+require('dotenv').config();
+dotenv.config({path: "./.env.deploy"});;
 
 const {
-  JWT_SECRET, DEPLOY_USER, DEPLOY_HOST, DEPLOY_REF = 'origin/master', DEPLOY_PATH, DEPLOY_REPO,
+  DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REPOSITORY, DEPLOY_REF,
 } = process.env;
 
 module.exports = {
-  apps: [{
-    name: 'backend',
-    script: 'npm run start',
-    env_production: {
-      NODE_ENV: 'production',
-      JWT_SECRET,
-    },
+  apps : [{
+    name   : "backend",
+    script : "dist/app.js"
   }],
   deploy: {
     production: {
       user: DEPLOY_USER,
       host: DEPLOY_HOST,
       ref: DEPLOY_REF,
-      repo: DEPLOY_REPO,
+      repo: DEPLOY_REPOSITORY,
       path: DEPLOY_PATH,
-      'pre-deploy-local': `scp ./.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      'post-deploy': 'cd /home/deploy/backend && npm i && pm2 start ecosystem.config.js --env production && pm2 save',
+      'pre-deploy-local': `scp ./.env.deploy ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
+      'post-deploy': 'cd backend && pwd && npm ci && npm run build && pm2 startOrRestart ecosystem.config.js',
     },
   },
-};
+}
