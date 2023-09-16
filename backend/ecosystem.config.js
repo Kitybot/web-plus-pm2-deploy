@@ -1,3 +1,4 @@
+import 'dotenv/config'
 require('dotenv').config();
 dotenv.config({path: "./.env.deploy"});;
 
