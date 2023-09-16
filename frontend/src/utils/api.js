@@ -139,6 +139,6 @@ class Api {
 }
 }
 // Замените на адрес вашего бэкенда
-const api = new Api('https://api.mestokirbob.students.nomoredomains.ru');
+const api = new Api('http://localhost:3000');
 
 export default api;

@@ -4,7 +4,7 @@ dotenvConfig({ path: '.env' });
 dotenvConfig({ path: '.env.deploy' });
 
 const {
-  JWT_SECRET, DEPLOY_USER, DEPLOY_HOST, DEPLOY_REF, DEPLOY_PATH, DEPLOY_REPO,
+  JWT_SECRET, DEPLOY_USER, DEPLOY_HOST, DEPLOY_REF = 'origin/master', DEPLOY_PATH, DEPLOY_REPO,
 } = process.env;
 
 module.exports = {

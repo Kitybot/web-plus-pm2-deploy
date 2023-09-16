@@ -1,5 +1,0 @@
-DEPLOY_USER='deploy'
-DEPLOY_HOST='51.250.69.224'
-DEPLOY_REF='origin/master'
-DEPLOY_PATH='/home/deploy/mesto-frontend'
-DEPLOY_REPO='https://github.com/Kitybot/web-plus-pm2-deploy'
