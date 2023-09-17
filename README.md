@@ -21,7 +21,7 @@ IP адрес сервера: 158.160.122.56
 
 Frontend: https://mestokirbob.students.nomoredomainsicu.ru
 
-Backend: https://api.mestokirbob.students.nomoredomains.ru
+Backend: https://api.mestokirbob.students.nomoredomainsicu.ru
 
 Доступные команды
 Код клиентской и серверной частей приложения расположен в одном репозитории:
